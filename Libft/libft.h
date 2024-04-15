@@ -6,7 +6,7 @@
 /*   By: mpuyo-ro <mpuyo-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 17:02:32 by mpuyo-ro          #+#    #+#             */
-/*   Updated: 2024/04/15 19:07:31 by mpuyo-ro         ###   ########.fr       */
+/*   Updated: 2024/04/15 19:17:09 by mpuyo-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,17 @@ int	ft_isascii(int c);
  * @param c	The character to check
  *
  * @return	1 if the character is a printable character;
- * 			0 otherwise.
+ * 			0 otherwise
+ */
+ int	ft_isprint(int c);
+
+ /**
+  * @brief	Computes the length of the string 's'.
+  *
+  * @param s	The string to compute the lenght of.
+  *
+  * @return	The length of the string 's'.
+  */
+ size_t	ft_strlen(const char *s);
 
 #endif
