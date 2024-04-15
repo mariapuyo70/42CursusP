@@ -6,7 +6,7 @@
 /*   By: mpuyo-ro <mpuyo-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 17:02:32 by mpuyo-ro          #+#    #+#             */
-/*   Updated: 2024/04/15 18:09:30 by mpuyo-ro         ###   ########.fr       */
+/*   Updated: 2024/04/15 18:59:51 by mpuyo-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,16 @@ int	ft_isalnum(int c);
  * 			0 otherwise.
  */
 int	ft_isalpha(int c);
+
+/**
+ * @brief	Checks if the passed character is an ASCII character.
+ *
+ * @param c	The character to check.
+ *
+ * @return	1 if the character is an ASCII character;
+ * 			0 otherwise.
+ */
+int	ft_isascii(int c);
 
 /**
  * @brief	Checks if the passed character is a digit.
