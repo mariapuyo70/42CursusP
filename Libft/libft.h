@@ -6,7 +6,7 @@
 /*   By: mpuyo-ro <mpuyo-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 17:02:32 by mpuyo-ro          #+#    #+#             */
-/*   Updated: 2024/04/15 19:17:09 by mpuyo-ro         ###   ########.fr       */
+/*   Updated: 2024/04/15 20:06:09 by mpuyo-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,17 @@ int	ft_isascii(int c);
  * 			0 otherwise
  */
  int	ft_isprint(int c);
+
+ /**
+  * @brief	Fills the first 'n' bytes of memory area pointed to by 's' with the constant byte 'c'.
+  *
+  * @param b	The memory area to fill
+  * @param c	The constant byte to fill the memory area with.
+  * @param len	The number of bytes to fill.
+  *
+  *@return	Memory area pointed to by 'b'.
+  */
+ void	ft_memset(void *b, int c, size_t len);
 
  /**
   * @brief	Computes the length of the string 's'.
