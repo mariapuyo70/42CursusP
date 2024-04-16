@@ -6,7 +6,7 @@
 /*   By: mpuyo-ro <mpuyo-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 17:02:32 by mpuyo-ro          #+#    #+#             */
-/*   Updated: 2024/04/15 20:06:09 by mpuyo-ro         ###   ########.fr       */
+/*   Updated: 2024/04/16 18:35:52 by mpuyo-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,13 @@
 
 #include <unistd.h>
 
+/**
+ * @brief	Fills the first 'n' bytes of memory area pointed by 's' with zeroes.
+ *
+ * @param s	The memory area to fill.
+ * @param n	The number of bytes to fill.
+ */
+int	ft_bzero(void *s, size_t n);
 /**
  * @brief	Checks if the passed character is an alnumeric character
  *
@@ -75,6 +82,21 @@ int	ft_isascii(int c);
   *@return	Memory area pointed to by 'b'.
   */
  void	ft_memset(void *b, int c, size_t len);
+
+/**
+ *@brief	Copies 'n' bytes from memory area 'src' to memory area 'dst'.
+ * 			The memory areas may overlap: copying takes place as though the
+ * 			bytes in 'src' are first copied into a temporary array that does
+ * 			not overlap 'src' or 'dst',	and the bytes are then copied from the
+ * 			temporary array to 'dst'.
+ * 
+ * @param dst 	The destination memory area.
+ * @param src 	The source memory area.
+ * @param n 	The number of bytes to copy.
+ * 
+ * @return	Original value of 'dst'.
+ */
+void	ft_memcpy(void *dst, const void *src, size_t n);
 
  /**
   * @brief	Computes the length of the string 's'.
