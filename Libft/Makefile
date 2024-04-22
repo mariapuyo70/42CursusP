@@ -11,3 +11,22 @@
 # **************************************************************************** #
 
 
+NAME = libft.a
+CC = gcc -c
+CFLAGS = -Wall -Wextra -Werror
+
+SOURCES = ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_memcpy.c ft_memset.c ft_strlen.c
+
+
+OBJECTS = $(SOURCES:.c=.o)
+
+$(NAME):
+	$(CC) $(CFLAGS) $(SOURCES)
+	-ar rcs $(NAME) $(OBJECTS)
+clean:
+	rm -f $(OBJECTS)
+fclean: clean
+	rm -f $(NAME)
+all: $(NAME)
+re: fclean all
+.PHONY: all clean fclean re

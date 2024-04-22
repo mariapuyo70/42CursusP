@@ -21,7 +21,7 @@
  * @param s	The memory area to fill.
  * @param n	The number of bytes to fill.
  */
-int	ft_bzero(void *s, size_t n);
+void	ft_bzero(void *s, size_t n);
 /**
  * @brief	Checks if the passed character is an alnumeric character
  *
@@ -96,7 +96,7 @@ int	ft_isascii(int c);
  * 
  * @return	Original value of 'dst'.
  */
-void	ft_memcpy(void *dst, const void *src, size_t n);
+void	*ft_memcpy(void *dst, const void *src, size_t n);
 
  /**
   * @brief	Computes the length of the string 's'.
