@@ -6,7 +6,7 @@
 /*   By: mpuyo-ro <mpuyo-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 17:02:32 by mpuyo-ro          #+#    #+#             */
-/*   Updated: 2024/04/23 17:40:41 by mpuyo-ro         ###   ########.fr       */
+/*   Updated: 2024/04/23 19:40:12 by mpuyo-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,6 +112,18 @@ void	*ft_memcpy(void *dst, const void *src, size_t n);
  * @return	Original value of 'dst'.
  */
 void	*ft_memmove(void *dst, const void *src, size_t n);
+
+/**
+ * @brief	Copies up to 'size - 1' characters from the null-terminated string
+ * 			'src' to 'dst', null-terminating the result.
+ * 
+ * @param dst 	The destination string.
+ * @param src 	The source string.
+ * @param sze 	The size of the destination string.
+ * 
+ * @return	The total length of the string 'src'.
+ */
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 
  /**
   * @brief	Computes the length of the string 's'.
