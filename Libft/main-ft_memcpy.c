@@ -3,13 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   main-ft_memcpy.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mpuyo-ro <mpuyo-ro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mpuyo-ro <mpuyo-ro@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 18:19:51 by mpuyo-ro          #+#    #+#             */
-/*   Updated: 2024/04/16 18:29:30 by mpuyo-ro         ###   ########.fr       */
+/*   Updated: 2024/04/25 19:53:42 by mpuyo-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
+
 
 void	main(void *dst, const void *src, size_t n)
 {

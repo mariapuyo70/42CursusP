@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mpuyo-ro <mpuyo-ro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mpuyo-ro <mpuyo-ro@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 17:02:32 by mpuyo-ro          #+#    #+#             */
-/*   Updated: 2024/04/23 19:40:12 by mpuyo-ro         ###   ########.fr       */
+/*   Updated: 2024/04/25 20:02:31 by mpuyo-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -144,5 +144,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
   * @return	The length of the string 's'.
   */
 size_t	ft_strlen(const char *s);
+
+int ft_toupper(int c);
 
 #endif
