@@ -114,6 +114,18 @@ void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memmove(void *dst, const void *src, size_t n);
 
 /**
+ * @brief	Appends the null-terminated string 'src' to the end of 'dst'.
+ * 			It will append at most 'sze - strlen(dst) - 1' bytes,
+ * 			null-terminating the result.
+ * 
+ * @param dst 	The destination string.
+ * @param src 	The source string.
+ * @param sze 	The size of the destination string.
+ * 
+ * @return	The total length of the string it tried to create.
+ */
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
+/**
  * @brief	Copies up to 'size - 1' characters from the null-terminated string
  * 			'src' to 'dst', null-terminating the result.
  * 
@@ -126,8 +138,7 @@ void	*ft_memmove(void *dst, const void *src, size_t n);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 
  /**
-  * @brief	Computes the length of the string 's'.
-  *
+  * @brief	Computes the length of the string 's'.  *
   * @param s	The string to compute the lenght of.
   *
   * @return	The length of the string 's'.
