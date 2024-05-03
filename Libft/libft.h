@@ -6,7 +6,7 @@
 /*   By: mpuyo-ro <mpuyo-ro@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 17:02:32 by mpuyo-ro          #+#    #+#             */
-/*   Updated: 2024/05/03 16:16:22 by mpuyo-ro         ###   ########.fr       */
+/*   Updated: 2024/05/03 17:31:28 by mpuyo-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,14 @@
 # define LIBFT_H
 
 #include <unistd.h>
+#include <stdlib.h>
 
 
 int	ft_atoi(const char *str);
 
 void	ft_bzero(void *s, size_t n);
+
+void	*ft_calloc(size_t count, size_t size);
 
 int		ft_isalnum(int c);
 
