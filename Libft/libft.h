@@ -6,7 +6,7 @@
 /*   By: mpuyo-ro <mpuyo-ro@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 17:02:32 by mpuyo-ro          #+#    #+#             */
-/*   Updated: 2024/04/26 20:36:50 by mpuyo-ro         ###   ########.fr       */
+/*   Updated: 2024/05/03 16:16:22 by mpuyo-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 #include <unistd.h>
 
+
+int	ft_atoi(const char *str);
 
 void	ft_bzero(void *s, size_t n);
 
