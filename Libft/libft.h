@@ -6,7 +6,7 @@
 /*   By: mpuyo-ro <mpuyo-ro@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 17:02:32 by mpuyo-ro          #+#    #+#             */
-/*   Updated: 2024/05/03 17:54:03 by mpuyo-ro         ###   ########.fr       */
+/*   Updated: 2024/05/03 18:47:52 by mpuyo-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,5 +62,7 @@ size_t	ft_strlen(const char *s);
 int	ft_tolower(int c);
 
 int	ft_toupper(int c);
+
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif
