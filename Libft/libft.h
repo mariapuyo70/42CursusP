@@ -6,7 +6,7 @@
 /*   By: mpuyo-ro <mpuyo-ro@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 17:02:32 by mpuyo-ro          #+#    #+#             */
-/*   Updated: 2024/05/03 17:31:28 by mpuyo-ro         ###   ########.fr       */
+/*   Updated: 2024/05/03 17:54:03 by mpuyo-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memmove(void *dst, const void *src, size_t n);
 
 char	*ft_strchr(const char *str, int c);
+
+char	*ft_strdup(const char *s1);
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n);
 
