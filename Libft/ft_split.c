@@ -6,7 +6,7 @@
 /*   By: mpuyo-ro <mpuyo-ro@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 20:18:54 by mpuyo-ro          #+#    #+#             */
-/*   Updated: 2024/05/17 20:18:55 by mpuyo-ro         ###   ########.fr       */
+/*   Updated: 2024/05/17 20:58:00 by mpuyo-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,19 @@ static char	*get_next_word(const char *s, char c, int *index)
 	return (word);
 }
 
+static void	free_matrix(char **matrix, int word_count)
+{
+	int	i;
+
+	i = 0;
+	while (i < word_count)
+	{
+		free(matrix[i]);
+		i++;
+	}
+	free(matrix);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	int		word_count;
@@ -89,9 +102,7 @@ char	**ft_split(char const *s, char c)
 		matrix[i] = get_next_word(s, c, &index);
 		if (!matrix[i])
 		{
-			while (i > 0)
-				free(matrix[--i]);
-			free(matrix);
+			free_matrix(matrix, i);
 			return (NULL);
 		}
 		i++;
