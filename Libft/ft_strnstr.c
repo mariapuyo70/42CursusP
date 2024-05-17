@@ -6,7 +6,7 @@
 /*   By: mpuyo-ro <mpuyo-ro@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 15:52:41 by mpuyo-ro          #+#    #+#             */
-/*   Updated: 2024/05/03 15:52:44 by mpuyo-ro         ###   ########.fr       */
+/*   Updated: 2024/05/17 15:53:50 by mpuyo-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t	j;
 
 	i = 0;
-	if (haystack == NULL)
-		return (NULL);
-	if (!needle || needle[0] == '\0')
+	if (needle[0] == '\0')
 		return ((char *)haystack);
 	while (haystack[i] && i < len)
 	{

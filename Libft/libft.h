@@ -6,15 +6,15 @@
 /*   By: mpuyo-ro <mpuyo-ro@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 17:02:32 by mpuyo-ro          #+#    #+#             */
-/*   Updated: 2024/05/03 18:47:52 by mpuyo-ro         ###   ########.fr       */
+/*   Updated: 2024/05/17 20:19:34 by mpuyo-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-#include <unistd.h>
-#include <stdlib.h>
+# include <unistd.h>
+# include <stdlib.h>
 
 int		ft_atoi(const char *str);
 
@@ -49,6 +49,8 @@ void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 
 void	ft_putstr_fd(char *s, int fd);
+
+char	**ft_split(char const *s, char c);
 
 char	*ft_strchr(const char *str, int c);
 
