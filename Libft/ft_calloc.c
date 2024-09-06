@@ -6,7 +6,7 @@
 /*   By: mpuyo-ro <mpuyo-ro@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 16:38:57 by mpuyo-ro          #+#    #+#             */
-/*   Updated: 2024/05/03 17:56:19 by mpuyo-ro         ###   ########.fr       */
+/*   Updated: 2024/06/11 20:18:32 by mpuyo-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,13 @@
 void	*ft_calloc(size_t count, size_t size)
 {
 	unsigned char	*tmp;
-	size_t			i;
 
-	i = 0;
 	tmp = malloc (size * count);
 	if (!tmp)
 		return (NULL);
-	while (i < (count * size))
+	else
 	{
-		tmp[i] = 0;
-		i++;
+		ft_bzero(tmp, (count * size));
+		return (tmp);
 	}
-	return (&tmp[0]);
 }

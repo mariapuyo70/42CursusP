@@ -6,7 +6,7 @@
 #    By: mpuyo-ro <mpuyo-ro@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/16 19:12:27 by mpuyo-ro          #+#    #+#              #
-#    Updated: 2024/05/17 20:21:24 by mpuyo-ro         ###   ########.fr        #
+#    Updated: 2024/06/11 18:59:04 by mpuyo-ro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,14 +21,26 @@ SOURCES = ft_atoi.c ft_bzero.c ft_calloc.c ft_itoa.c ft_isalnum.c ft_isalpha.c f
 		ft_strlcpy.c ft_strlen.c ft_strmapi.c ft_strtrim.c ft_tolower.c ft_toupper.c ft_substr.c
 
 
+BSOURCES = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c ft_lstlast_bonus.c\
+		ft_lstadd_back_bonus.c ft_lstdelone_bonus.c ft_lstclear_bonus.c ft_lstiter_bonus.c\
+		ft_lstmap_bonus.c
+
+
 OBJECTS = $(SOURCES:.c=.o)
+
+BOBJECTS = $(BSOURCES:.c=.o)
 
 $(NAME):
 	$(CC) $(CFLAGS) $(SOURCES)
 	-ar rcs $(NAME) $(OBJECTS)
 
+
+bonus:
+	$(CC) $(CFLAGS) $(BSOURCES)
+	-ar rcs $(NAME) $(BOBJECTS)
+
 clean:
-	rm -f $(OBJECTS)
+	rm -f $(OBJECTS) $(BOBJECTS)
 
 fclean: clean
 	rm -f $(NAME)

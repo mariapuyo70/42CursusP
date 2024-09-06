@@ -1,42 +1,26 @@
-
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mpuyo-ro <mpuyo-ro@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/03 18:38:16 by mpuyo-ro          #+#    #+#             */
-/*   Updated: 2024/05/03 19:33:32 by mpuyo-ro         ###   ########.fr       */
+/*   Created: 2024/06/11 19:52:30 by mpuyo-ro          #+#    #+#             */
+/*   Updated: 2024/06/20 15:58:43 by mpuyo-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	char	*sub;
-	size_t	i;
+	t_list	*lst_temp;
 
-	if (!s || start >= ft_strlen(s))
+	while (*lst != NULL)
 	{
-		sub = (char *)malloc(1);
-		if (!sub)
-			return (NULL);
-		sub[0] = '\0';
-		return (sub);
+		lst_temp = (*lst)->next;
+		ft_lstdelone(*lst, del);
+		*lst = lst_temp;
 	}
-	if (ft_strlen(s) - start < len)
-		len = ft_strlen(s) - start;
-	sub = (char *)malloc(len + 1);
-	if (!sub)
-		return (NULL);
-	i = 0;
-	while (len > 0)
-	{
-		sub[i++] = s[start++];
-		len--;
-	}
-	sub[i] = '\0';
-	return (sub);
+	*lst = NULL;
 }

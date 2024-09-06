@@ -1,42 +1,36 @@
-
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mpuyo-ro <mpuyo-ro@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/03 18:38:16 by mpuyo-ro          #+#    #+#             */
-/*   Updated: 2024/05/03 19:33:32 by mpuyo-ro         ###   ########.fr       */
+/*   Created: 2024/06/11 19:59:05 by mpuyo-ro          #+#    #+#             */
+/*   Updated: 2024/06/20 16:01:33 by mpuyo-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	char	*sub;
-	size_t	i;
+	t_list	*new_list;
+	t_list	*new_element;
 
-	if (!s || start >= ft_strlen(s))
-	{
-		sub = (char *)malloc(1);
-		if (!sub)
-			return (NULL);
-		sub[0] = '\0';
-		return (sub);
-	}
-	if (ft_strlen(s) - start < len)
-		len = ft_strlen(s) - start;
-	sub = (char *)malloc(len + 1);
-	if (!sub)
+	if (lst == NULL)
 		return (NULL);
-	i = 0;
-	while (len > 0)
+	new_list = NULL;
+	while (lst != NULL)
 	{
-		sub[i++] = s[start++];
-		len--;
+		new_element = ft_lstnew(NULL);
+		if (new_element == NULL)
+		{
+			ft_lstclear(&new_list, del);
+			return (NULL);
+		}
+		new_element->content = f(lst->content);
+		ft_lstadd_back(&new_list, new_element);
+		lst = lst->next;
 	}
-	sub[i] = '\0';
-	return (sub);
+	return (new_list);
 }

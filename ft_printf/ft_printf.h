@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mpuyo-ro <mpuyo-ro@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/17 16:15:00 by mpuyo-ro          #+#    #+#             */
-/*   Updated: 2024/06/20 16:23:00 by mpuyo-ro         ###   ########.fr       */
+/*   Created: 2024/09/04 13:11:39 by mpuyo-ro          #+#    #+#             */
+/*   Updated: 2024/09/04 13:11:41 by mpuyo-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-char	*ft_strjoin(char const *s1, char const *s2)
-{
-	size_t		size1;
-	size_t		size2;
-	char const	*s3;
+# include <unistd.h>
+# include <stdarg.h>
+# include <stdlib.h>
+# include <stdint.h>
 
-	size1 = ft_strlen(s1) + 1;
-	size2 = ft_strlen(s2) + 1;
-	s3 = malloc(size1 + size2);
-	if (!s3)
-		return (NULL);
-	ft_strlcpy((char *restrict) s3, (const char *restrict) s1, size1);
-	ft_strlcat((char *)s3, s2, size1 + size2);
-	return ((char *)s3);
-}
+int	ft_printf(char const *string, ...);
+int	ft_putstr(char *str);
+int	ft_putchar(char a);
+int	ft_puthex(unsigned long long n, char c);
+int	ft_putnbr(int n);
+int	ft_putptr(uintptr_t n);
+int	ft_putunsigned(unsigned int n);
+
+#endif
