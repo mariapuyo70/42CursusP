@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mpuyo-ro <mpuyo-ro@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/04 11:28:40 by maria             #+#    #+#             */
-/*   Updated: 2024/10/17 16:23:11 by mpuyo-ro         ###   ########.fr       */
+/*   Created: 2024/10/17 15:59:36 by mpuyo-ro          #+#    #+#             */
+/*   Updated: 2024/10/17 16:22:33 by mpuyo-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#include "get_next_line.h"
 
-# include <unistd.h>
-# include <stdlib.h>
-# include <stdio.h>
-# include <fcntl.h>
+int	main(int argc, char ** argv)
+{
+	int	fd;
+	int	check_open;
+	int	bytes_read;
+	int	check_close;
 
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 32
-# endif
+	fd = open(argv[1], O_RDONLY);
+	if (fd ==-1) 
+		return (1);
+	bytes_read = read(fd, buffer, BUFFER_SIZE);
+		if (bytes_read == -1)
+			return(1);
+	check_close = close (fd);
+		if (check_close == -1)
+			return (1);
 
-char	*get_next_line(int fd);
-
-#endif
+}
