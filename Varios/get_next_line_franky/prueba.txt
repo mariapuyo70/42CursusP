@@ -1,0 +1,3 @@
+Intenta leer lo menos posible cada vez que se llame a
+get_next_line(). Si encuentras un salto de línea, deberás devolver la
+línea actual. No leas el archivo entero y luego proceses cada línea.
