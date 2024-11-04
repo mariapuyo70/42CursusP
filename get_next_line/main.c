@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mpuyo-ro <mpuyo-ro@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: maria <mpuyo-ro@student.42malaga.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 15:59:36 by mpuyo-ro          #+#    #+#             */
-/*   Updated: 2024/10/25 16:50:08 by mpuyo-ro         ###   ########.fr       */
+/*   Updated: 2024/11/04 16:54:33 by maria            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
+#include <stdio.h>
+#include <fcntl.h>
 
 /* int	main(int argc, char **argv)
 {

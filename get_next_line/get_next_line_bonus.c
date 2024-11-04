@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maria <mpuyo-ro@student.42malaga.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/26 13:34:16 by maria             #+#    #+#             */
-/*   Updated: 2024/11/04 16:44:38 by maria            ###   ########.fr       */
+/*   Created: 2024/11/01 18:19:23 by maria             #+#    #+#             */
+/*   Updated: 2024/11/04 16:46:07 by maria            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 char	*extract_line(char *start)
 {
@@ -71,28 +71,28 @@ char	*update_stored(char	*stored)
 char	*get_next_line(int fd)
 {
 	char		*tmp;
-	int			bytes_read;
-	static char	*stored;
+	int			fd_read;
+	static char	*stored[1024] = {NULL};
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
-	bytes_read = 1;
+	fd_read = 1;
 	tmp = (char *)malloc(sizeof(char) * (BUFFER_SIZE + 1));
 	if (!tmp)
 		return (NULL);
-	while (!(ft_strchr(stored, '\n')) && bytes_read != 0)
+	while (!(ft_strchr(stored[fd], '\n')) && fd_read != 0)
 	{
-		bytes_read = read(fd, tmp, BUFFER_SIZE);
-		if (bytes_read == -1)
+		fd_read = read(fd, tmp, BUFFER_SIZE);
+		if (fd_read == -1)
 		{
 			free(tmp);
 			return (NULL);
 		}
-		tmp[bytes_read] = '\0';
-		stored = ft_strjoin(stored, tmp);
+		tmp[fd_read] = '\0';
+		stored[fd] = ft_strjoin(stored[fd], tmp);
 	}
 	free(tmp);
-	tmp = extract_line(stored);
-	stored = update_stored(stored);
+	tmp = extract_line(stored[fd]);
+	stored[fd] = update_stored(stored[fd]);
 	return (tmp);
 }

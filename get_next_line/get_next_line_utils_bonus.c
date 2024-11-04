@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_utils.c                              :+:      :+:    :+:   */
+/*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maria <mpuyo-ro@student.42malaga.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/17 14:27:44 by mpuyo-ro          #+#    #+#             */
-/*   Updated: 2024/11/04 15:57:40 by maria            ###   ########.fr       */
+/*   Created: 2024/11/01 18:50:36 by maria             #+#    #+#             */
+/*   Updated: 2024/11/04 15:50:50 by maria            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 size_t	ft_strlen(char	*str)
 {

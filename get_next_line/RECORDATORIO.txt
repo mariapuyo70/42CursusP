@@ -1,0 +1,5 @@
+RECORDAR SACAR: 
+
+- El main
+- El tester
+- Este archivo y el otro .txt
