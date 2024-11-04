@@ -6,7 +6,7 @@
 /*   By: maria <mpuyo-ro@student.42malaga.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 18:38:13 by maria             #+#    #+#             */
-/*   Updated: 2024/11/04 15:38:58 by maria            ###   ########.fr       */
+/*   Updated: 2024/11/04 17:24:56 by maria            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,10 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 32
+# endif
 
 size_t	ft_strlen(char *str);
 char	*get_next_line(int fd);
