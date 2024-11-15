@@ -5,8 +5,8 @@ static void	reverse_rotate(t_node **stack)
 	t_node	*last;
 	int		len;
 
-	len = stack_len(*stack);
-	if (*stack == NULL || stack == NULL || len == 1)
+	len = stack_len(*stack); //Yo creo que esto lo puedes ahorrar si compruebas si existe el next->next
+	if (*stack == NULL || stack == NULL || len == 1)// Y entonces te saldrías si no existe
 		return ;
 	last = find_last_node(*stack);
 	last->prev->next = NULL;
